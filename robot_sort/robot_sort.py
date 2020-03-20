@@ -99,20 +99,28 @@ class SortingRobot:
         self.swap_item()
 
         while True:
+            # reset flag
             self.set_light_off()
 
+            # keep moving right until it reaches the end
             while self.move_right():
+
+                # if item in hand is greater than current item, swap them
                 if self.compare_item() == 1:
                     self.swap_item()
                     self.set_light_on()
+                
+                # if item Nothing in hand, swap with current item
                 elif self.compare_item() == None:
                     self.swap_item()
             
+            # keep moving left until encounter a None slot to place item in hand
             while self.compare_item() != None:
                 self.move_left()
 
             self.swap_item()
             
+            # if flag was not triggered, list is sorted
             if not self.light_is_on():
                 break
 
