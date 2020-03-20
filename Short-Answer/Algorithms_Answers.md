@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a) o(n)
+a) o(log n)
 
 
-b) o(n)
+b) o(n ^ 2)
 
 
-c)
+c) o(n)
 
 ## Exercise II
 
